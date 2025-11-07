@@ -21,7 +21,7 @@ addBtn.addEventListener("click", function () {
     list.append(li);
 
     // 3️. Clear input
-    input.innerText = "";
+    input.value = "";
   } else {
     alert("Please enter a valid item!");
   }
