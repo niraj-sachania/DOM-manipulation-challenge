@@ -1,14 +1,13 @@
 // Select DOM elements
-const input = document.querySelector('#itemInput');
-const addBtn = document.querySelector('#addBtn');
-const list = document.querySelector('#list');
+const input = document.querySelector("#itemInput");
+const addBtn = document.querySelector("#addBtn");
+const list = document.querySelector("#list");
 
 // Add event listener for button click
-addBtn.addEventListener('click', function() {
+addBtn.addEventListener("click", function () {
+  const inputValue = input.value;
 
-    const inputValue = input.value;
-
-    if (inputValue !== '') {
+  if (inputValue !== "") {
     // 1️. Create new <li>
     const li = document.createElement("li");
     li.innerText = inputValue;
@@ -17,11 +16,8 @@ addBtn.addEventListener('click', function() {
     list.append(li);
 
     // 3️. Clear input
-    input.innerText = '';
-
+    input.innerText = "";
   } else {
-    alert('Please enter a valid item!');
-  };
-})
-
-
+    alert("Please enter a valid item!");
+  }
+});
