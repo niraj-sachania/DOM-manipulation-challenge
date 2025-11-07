@@ -3,6 +3,11 @@ const input = document.querySelector("#itemInput");
 const addBtn = document.querySelector("#addBtn");
 const list = document.querySelector("#list");
 
+// Disable the button when input is empty or contains just spaces
+input.addEventListener("keyup", function () {
+  addBtn.disabled = this.value.trim() === "";
+});
+
 // Add event listener for button click
 addBtn.addEventListener("click", function () {
   const inputValue = input.value;

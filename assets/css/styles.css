@@ -45,10 +45,18 @@ h1 {
   font-size: 14px;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, opacity 0.2s ease;
 }
 
-#addBtn:hover {
+#addBtn:disabled {
+  background: #9bbcf8;
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+#addBtn:not(:disabled):hover {
   background: #0056b3;
 }
 
